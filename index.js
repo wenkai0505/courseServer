@@ -9,7 +9,7 @@ const passport = require('passport')
 require('./config/passport')
 const cors = require('cors')
 
-let port = 8080
+
 
 mongoose.connect(process.env.MONGODBCONNECT)
     .then(() => {
@@ -29,7 +29,7 @@ app.use('/api/filterCourse', filterCourseRouter)
 app.use('/api/course', passport.authenticate('jwt', { session: false }), courseRoute)
 
 
-app.listen(port, (req, res) => {
+app.listen(5000, () => {
     console.log("Server is running on port 8080 . ")
 })
 
