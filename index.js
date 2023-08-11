@@ -9,7 +9,7 @@ const passport = require('passport')
 require('./config/passport')
 const cors = require('cors')
 
-let port = process.env.PORT || 8080
+let port = 8080
 
 mongoose.connect(process.env.MONGODBCONNECT)
     .then(() => {
@@ -33,3 +33,5 @@ app.listen(port, (req, res) => {
     console.log("Server is running on port 8080 . ")
 })
 
+
+module.export = app
