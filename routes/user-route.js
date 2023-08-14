@@ -120,7 +120,7 @@ router.get('/instructor', async (rea, res) => {
         let foundUser = await User.find({ role: "instructor" })
         //数组中随机取出几个元素
         var newArr = [];
-        for (var i = 0; i < 3; i++) {
+        for (var i = 0; i < 4; i++) {
             var index = Math.floor(Math.random() * foundUser.length);
             var item = foundUser[index];
             newArr.push(item)
