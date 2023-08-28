@@ -14,7 +14,6 @@ router.use('/', (req, res, next) => {
 
 //註冊用戶
 router.post('/register', async (req, res) => {
-
     try {
         let form = new multiparty.Form({
             uploadDir: 'upload'
