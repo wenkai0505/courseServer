@@ -139,4 +139,25 @@ router.get('/instructor', async (rea, res) => {
     }
 })
 
+//取得所有用戶
+router.get('/userList', async (req, res) => {
+    try {
+        let foundUser = await User.find({})
+        return res.send({
+            msg: 'success',
+            userList: foundUser
+        })
+    }
+    catch (err) {
+        return res.send({
+            msg: "fail",
+            error: err.message
+        })
+    }
+
+
+
+
+})
+
 module.exports = router

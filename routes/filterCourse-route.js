@@ -10,7 +10,7 @@ router.use('/', (req, res, next) => {
 
 router.get('/', async (req, res) => {
     try {
-        let foundCourse = await Course.aggregate([{ $sample: { size: 4 } }])
+        let foundCourse = await Course.aggregate([{ $sample: { size: 8 } }])
         return res.send({
             msg: 'success',
             course: foundCourse

@@ -30,6 +30,10 @@ const userSchema = new Schema({
     },
     userPic: {
         type: String,
+    },
+    isAdmin: {
+        type: Boolean,
+        default: false
     }
 })
 
